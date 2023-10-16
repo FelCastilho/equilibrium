@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "428221012353",
+    "project_id": "equilibrium-255cd",
+    "storage_bucket": "equilibrium-255cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428221012353:android:4678a94f842f127e173080",
+        "android_client_info": {
+          "package_name": "com.equilibrium"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428221012353-3rfi43f3u95dnrbrgd0lut87b484vuc2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoc_U0VfPixm44mIP-RGNFLadqCyVIRko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428221012353-3rfi43f3u95dnrbrgd0lut87b484vuc2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
