@@ -1,7 +1,7 @@
-import React, { useState, useContext, useCallback, useEffect } from 'react';
+import React, { useState, useContext, useCallback } from 'react';
 import { View, Text, ActivityIndicator } from 'react-native';
 
-import { Container, FabButton, ItemList, Header, Title, UploadButton, Avatar  } from './styles';
+import { Container, FabButton, ItemList, Header, Title } from './styles';
 import Feather from 'react-native-vector-icons/Feather';
 
 import { useNavigation, useFocusEffect } from '@react-navigation/native';

@@ -3,6 +3,7 @@ import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
@@ -66,8 +67,12 @@ function AppRoutes() {
                 name='Home'
                 component={Home}
                 options={{
-                    tabBarIcon: ({ color, size }) => {
-                        return <Feather name='home' color={color} size={size} />
+                    tabBarIcon: ({ focused, color, size }) => {
+                        if(focused){
+                            return <Ionicons name='home' color={color} size={size} />
+                        }else{
+                            return <Ionicons name='home-outline' color={color} size={size} />
+                        }
                     }
                 }}
             />
@@ -76,8 +81,12 @@ function AppRoutes() {
                 name="MetasTab"
                 component={StackRoutes}
                 options={{
-                    tabBarIcon: ({ color, size }) => {
-                        return <FontAwesome name='trophy' color={color} size={size} />
+                    tabBarIcon: ({ focused, color, size }) => {
+                        if(focused){
+                            return <Ionicons name='trophy' color={color} size={size} />
+                        }else{
+                            return <Ionicons name='trophy-outline' color={color} size={size} />
+                        }
                     },
                 }}
             />
@@ -95,8 +104,12 @@ function AppRoutes() {
                 name='Profile'
                 component={Profile}
                 options={{
-                    tabBarIcon: ({ color, size }) => {
-                        return <Feather name='user' color={color} size={size} />
+                    tabBarIcon: ({ focused, color, size }) => {
+                        if(focused){
+                            return <FontAwesome name='user' color={color} size={size} />
+                        }else{
+                            return <FontAwesome name='user-o' color={color} size={size} />
+                        }
                     }
                 }}
             />

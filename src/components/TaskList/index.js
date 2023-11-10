@@ -5,8 +5,6 @@ import { Container, Button, TaskText } from "./styles";
 import Feather from 'react-native-vector-icons/Feather';
 import firestore from '@react-native-firebase/firestore';
 
-import { useNavigation } from "@react-navigation/native";
-
 export default function TaskList({ data }) {
 
     function formatedLetter(word) {
