@@ -24,7 +24,7 @@ export default function AuthRoutes() {
     }, [firstTimeUser]);
 
     return (
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName='Login'>
 
 
             <Stack.Screen

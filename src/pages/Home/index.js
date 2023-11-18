@@ -12,7 +12,6 @@ import ListItem from '../../components/ListItem';
 import firestore from '@react-native-firebase/firestore';
 
 export default function Home() {
-
   const { user } = useContext(AuthContext);
   const userId = user.uid;
 

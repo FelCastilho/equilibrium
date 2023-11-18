@@ -1,7 +1,9 @@
 import React, { useState, useContext } from 'react';
 import { Image, Text, ActivityIndicator } from 'react-native';
 
-import { Container, ButtonLogin, ButtonLoginText, Input, Imagem, CreateAccount } from './styles';
+import { Container, ButtonLogin, ButtonLoginText, Input, Imagem, CreateAccount, ContainerInput, InputText } from './styles';
+
+import Feather from 'react-native-vector-icons/Feather';
 
 import { useNavigation } from '@react-navigation/native';
 import { AuthContext } from '../../context/auth';
@@ -26,24 +28,40 @@ export default function Login() {
   }
 
   return (
+    
     <Container>
 
       <Imagem
         source={require('../../assets/login-img.png')}
       />
 
-      <Input
-        value={email}
-        onChangeText={(text) => setEmail(text)}
-        placeholder='Email'
-      />
+      <ContainerInput>
 
-      <Input
-        value={password}
-        onChangeText={(text) => setPassword(text)}
-        placeholder='Password'
-        secureTextEntry={true}
-      />
+        <Feather name='mail' color='#418241' size={25} />
+
+        <Input
+          value={email}
+          onChangeText={(text) => setEmail(text)}
+          placeholder='Email'
+          placeholderTextColor="#418241"
+        />
+
+      </ContainerInput>
+
+      <ContainerInput>
+
+        <Feather name='lock' color='#418241' size={25} />
+
+        <Input
+          value={password}
+          onChangeText={(text) => setPassword(text)}
+          placeholder='Password'
+          placeholderTextColor="#418241"
+          secureTextEntry={true}
+        />
+
+      </ContainerInput>
+
 
       <ButtonLogin onPress={handleSignIn}>
         {loadingAuth ? (

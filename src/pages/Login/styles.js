@@ -10,19 +10,28 @@ export const Imagem = styled.Image`
     margin-bottom: 20px;
 `;
 
-export const Input = styled.TextInput`
-    background-color: #d9d9d9;
+export const ContainerInput = styled.View`
+    margin-top: 19px;
+    flex-direction: row;
     width: 80%;
-    margin-top: 10px;
+    height: 50px;
+    border: 2px solid #418241;
+    border-radius: 15px;
+    align-items: center;
     padding: 10px;
-    border-radius: 8px;
-    font-size: 17px;
+    gap: 10px;
+`;
+
+export const Input = styled.TextInput`
+    width: 80%;
+    padding: 2px;
 `;
 
 export const ButtonLogin = styled.TouchableOpacity`
     margin-top: 40px;
     background-color: #418241;
     width: 60%;
+    height: 49px;
     justify-content: center;
     align-items: center;
     padding: 10px;
