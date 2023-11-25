@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
-import { Image, Text, ActivityIndicator } from 'react-native';
+import { Text, ActivityIndicator } from 'react-native';
 
-import { Container, ButtonLogin, ButtonLoginText, Input, Imagem, CreateAccount, ContainerInput, InputText } from './styles';
+import { Container, ButtonLogin, ButtonLoginText, Input, Imagem, CreateAccount, ContainerInput, ContainerPassword, ContainerInputPassword, ButtonIconInput } from './styles';
 
 import Feather from 'react-native-vector-icons/Feather';
 
@@ -14,6 +14,7 @@ export default function Login() {
 
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
+  const [passwordVisible, setPasswordVisible] = useState(true);
 
   const { signIn, loadingAuth } = useContext(AuthContext);
 
@@ -48,19 +49,34 @@ export default function Login() {
 
       </ContainerInput>
 
-      <ContainerInput>
+      <ContainerInputPassword>
 
-        <Feather name='lock' color='#418241' size={25} />
+        <ContainerPassword>
 
-        <Input
-          value={password}
-          onChangeText={(text) => setPassword(text)}
-          placeholder='Password'
-          placeholderTextColor="#418241"
-          secureTextEntry={true}
-        />
+          <Feather name='lock' color='#418241' size={25} />
+          
+          <Input
+            value={password}
+            onChangeText={(text) => setPassword(text)}
+            placeholder='Password'
+            placeholderTextColor="#418241"
+            secureTextEntry={passwordVisible}
+          />
 
-      </ContainerInput>
+        </ContainerPassword>
+
+        <ButtonIconInput onPress={() => setPasswordVisible(!passwordVisible)}>
+
+          {passwordVisible ? (
+            <Feather name='eye-off' color='#418241' size={25} />
+          ) : (
+            <Feather name='eye' color='#418241' size={25} />
+          )}
+          
+
+        </ButtonIconInput>
+
+      </ContainerInputPassword>
 
 
       <ButtonLogin onPress={handleSignIn}>
