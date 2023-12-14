@@ -7,8 +7,9 @@ export const Container = styled.SafeAreaView`
     margin-top: 60px;
 `;
 
-export const WaterContainer = styled.View`
+export const WaterContainer = styled.TouchableOpacity`
     border: 4px solid #3E73FA;
+    background-color: red;
     border-radius: 20px;
     width: 200px;
     height: 80px;

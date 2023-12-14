@@ -38,6 +38,7 @@ export default function Home() {
           .then((snapshot) => {
 
             if (isActive) {
+              
               setObjectives({});
               const objectivesList = [];
 
