@@ -7,6 +7,7 @@ export default function ListItem({data, captalize}){
 
 
     return(
+        
         <Container>
 
             <ScrollView
